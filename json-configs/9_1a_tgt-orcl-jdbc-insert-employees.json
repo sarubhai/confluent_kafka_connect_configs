@@ -1,0 +1,14 @@
+{
+    "auto.create": "false",
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:oracle:thin:@10.0.1.100:1525/XE",
+    "connection.user": "orcl_user",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "insert.mode": "insert",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-orcl-jdbc-insert-employees",
+    "table.name.format": "EMPLOYEES",
+    "tasks.max": "3",
+    "topics": "EMPLOYEES"
+}

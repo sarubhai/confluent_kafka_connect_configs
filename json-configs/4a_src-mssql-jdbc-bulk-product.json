@@ -1,0 +1,21 @@
+{
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:sqlserver://10.0.1.100:1433;databaseName=adventureworks",
+    "connection.user": "sa",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "mode": "bulk",
+    "name": "src-mssql-jdbc-bulk-product",
+    "numeric.mapping": "best_fit",
+    "poll.interval.ms": "86400000",
+    "table.types": "TABLE",
+    "table.whitelist": "SalesLT.Product",
+    "tasks.max": "3",
+    "topic.prefix": "mssql-bulk-",
+    "transforms": "createKey,extractInt",
+    "transforms.createKey.fields": "ProductID",
+    "transforms.createKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
+    "transforms.extractInt.field": "ProductID",
+    "transforms.extractInt.type": "org.apache.kafka.connect.transforms.ExtractField$Key"
+}

@@ -1,0 +1,22 @@
+{
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:postgresql://10.0.1.100:5432/postgres",
+    "connection.user": "postgres",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "incrementing.column.name": "id",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "mode": "incrementing",
+    "name": "src-pg-jdbc-incr-consultants",
+    "numeric.mapping": "best_fit",
+    "poll.interval.ms": "300000",
+    "table.types": "TABLE",
+    "table.whitelist": "consultants",
+    "tasks.max": "3",
+    "topic.prefix": "pg-incr-",
+    "transforms": "createKey,extractInt",
+    "transforms.createKey.fields": "id",
+    "transforms.createKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
+    "transforms.extractInt.field": "id",
+    "transforms.extractInt.type": "org.apache.kafka.connect.transforms.ExtractField$Key"
+}

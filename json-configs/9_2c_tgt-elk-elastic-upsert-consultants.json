@@ -1,0 +1,23 @@
+{
+    "behavior.on.null.values": "delete",
+    "compact.map.entries": "true",
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "http://10.0.1.100:9200",
+    "connection.username": "elastic",
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-elk-elastic-upsert-consultants",
+    "schema.ignore": "true",
+    "tasks.max": "3",
+    "topics": "pg-consultants",
+    "transforms": "dropPrefix,InsertKey,ExtractId",
+    "transforms.ExtractId.field": "id",
+    "transforms.ExtractId.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
+    "transforms.InsertKey.fields": "id",
+    "transforms.InsertKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
+    "transforms.dropPrefix.regex": "pg-(.*)",
+    "transforms.dropPrefix.replacement": "$1",
+    "transforms.dropPrefix.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "write.method": "upsert"
+}

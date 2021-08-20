@@ -1,0 +1,12 @@
+{
+    "collection": "products",
+    "connection.uri": "mongodb://root:Pa55w0rd1234@10.0.1.100:27017",
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "database": "sales",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "key.ignore": "true",
+    "name": "tgt-mongo-mongo-insert-product",
+    "tasks.max": "3",
+    "topics": "mysql-product"
+}

@@ -1,0 +1,11 @@
+{
+    "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
+    "file": "/tmp/cust.txt",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "name": "src-file-fstream-cust",
+    "numeric.mapping": "best_fit",
+    "poll.interval.ms": "300000",
+    "tasks.max": "3",
+    "topic": "file-cust",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter"
+}

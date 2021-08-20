@@ -1,0 +1,20 @@
+{
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:oracle:thin:@10.0.1.100:1521/XE",
+    "connection.user": "orcl_user",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "mode": "bulk",
+    "name": "src-orcl-jdbc-bulk-employees",
+    "numeric.mapping": "best_fit",
+    "poll.interval.ms": "86400000",
+    "table.types": "TABLE",
+    "table.whitelist": "ORCL_USER.EMPLOYEES",
+    "tasks.max": "3",
+    "transforms": "createKey,extractInt",
+    "transforms.createKey.fields": "EMPLOYEE_ID",
+    "transforms.createKey.type": "org.apache.kafka.connect.transforms.ValueToKey",
+    "transforms.extractInt.field": "EMPLOYEE_ID",
+    "transforms.extractInt.type": "org.apache.kafka.connect.transforms.ExtractField$Key"
+}

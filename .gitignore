@@ -1,3 +1,9 @@
 
 # Mac
 .DS_Store
+
+# Convert properties files to json
+propTojson.py
+
+# Bulk upload all kafka connect
+uploadKafkaConnectConfig.sh
