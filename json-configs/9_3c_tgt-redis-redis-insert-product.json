@@ -7,8 +7,8 @@
     "redis.hosts": "10.0.1.100:6379",
     "redis.operation.timeout.ms": "20000",
     "redis.password": "Pa55w0rd1234",
-    "tasks.max": "3",
-    "topics": "mysql-product",
+    "tasks.max": "1",
+    "topics": "mysql-cdc-product",
     "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
     "value.converter.schemas.enable": "false"
 }

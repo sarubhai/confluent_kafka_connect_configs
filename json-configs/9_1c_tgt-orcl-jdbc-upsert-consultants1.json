@@ -1,17 +1,18 @@
 {
     "auto.create": "false",
     "connection.password": "Pa55w0rd1234",
-    "connection.url": "jdbc:oracle:thin:@10.0.1.100:1525/XE",
-    "connection.user": "orcl_user",
+    "connection.url": "jdbc:oracle:thin:@10.0.1.100:1525/ORCLPDB1",
+    "connection.user": "ORCL_USER",
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "delete.enabled": "true",
     "fields.whitelist": "FIRST_NAME,LAST_NAME,EMAIL,RATE,STATUS,CREATED_AT,UPDATED_AT",
     "insert.mode": "upsert",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "key.converter.schemas.enable": "false",
     "name": "tgt-orcl-jdbc-upsert-consultants1",
     "pk.fields": "ID",
-    "pk.mode": "record_value",
+    "pk.mode": "record_key",
     "table.name.format": "CONSULTANTS1",
-    "tasks.max": "3",
-    "topics": "ORCL-CDC-CONSULTANTS"
+    "tasks.max": "1",
+    "topics": "ORCL-CDC-ORCLPDB1-CONSULTANTS"
 }
