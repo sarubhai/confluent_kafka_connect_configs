@@ -1,0 +1,18 @@
+{
+    "change.data.capture.handler": "com.mongodb.kafka.connect.sink.cdc.debezium.rdbms.mysql.MysqlHandler",
+    "collection": "product",
+    "connection.uri": "mongodb://root:Pa55w0rd1234@10.0.1.100:27017",
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "database": "sales",
+    "delete.on.null.values": "true",
+    "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.PartialKeyStrategy",
+    "document.id.strategy.partial.key.projection.list": "id",
+    "document.id.strategy.partial.key.projection.type": "AllowList",
+    "errors.deadletterqueue.context.headers.enable": "true",
+    "errors.log.include.messages": "true",
+    "key.ignore": "false",
+    "name": "tgt-mongo-mongo-upsert-product",
+    "tasks.max": "1",
+    "topics": "mysqlserver.sales.product",
+    "writemodel.strategy": "com.mongodb.kafka.connect.sink.writemodel.strategy.ReplaceOneBusinessKeyStrategy"
+}

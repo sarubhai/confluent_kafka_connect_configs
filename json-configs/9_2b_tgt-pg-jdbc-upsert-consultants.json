@@ -1,0 +1,17 @@
+{
+    "auto.create": "false",
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:postgresql://10.0.1.100:5433/postgres?stringtype=unspecified",
+    "connection.user": "postgres",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "delete.enabled": "true",
+    "insert.mode": "upsert",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-pg-jdbc-upsert-consultants",
+    "pk.fields": "id",
+    "pk.mode": "record_key",
+    "table.name.format": "consultants",
+    "tasks.max": "1",
+    "topics": "pg-incr-consultants"
+}

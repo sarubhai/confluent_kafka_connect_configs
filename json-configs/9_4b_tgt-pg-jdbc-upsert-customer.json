@@ -1,0 +1,20 @@
+{
+    "auto.create": "false",
+    "connection.password": "Pa55w0rd1234",
+    "connection.url": "jdbc:postgresql://10.0.1.100:5433/postgres?stringtype=unspecified",
+    "connection.user": "postgres",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "delete.enabled": "true",
+    "insert.mode": "upsert",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-pg-jdbc-upsert-customer",
+    "pk.fields": "customerid",
+    "pk.mode": "record_key",
+    "table.name.format": "customer",
+    "tasks.max": "1",
+    "topics": "mssql-incr-Customer",
+    "transforms": "rename_fields",
+    "transforms.rename_fields.renames": "CustomerID:customerid,NameStyle:namestyle,Title:title,FirstName:firstname,MiddleName:middlename,LastName:lastname,Suffix:suffix,CompanyName:companyname,SalesPerson:salesperson,EmailAddress:emailaddress,Phone:phone,PasswordHash:passwordhash,PasswordSalt:passwordsalt,rowguid:rowguid,ModifiedDate:modifieddate",
+    "transforms.rename_fields.type": "org.apache.kafka.connect.transforms.ReplaceField$Value"
+}

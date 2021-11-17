@@ -1,0 +1,18 @@
+{
+    "aws.access.key.id": "AKIASZRTRTN6AV6NS7XQ",
+    "aws.secret.access.key": "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",
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "flush.size": "300",
+    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-s3-sink-insert-employees",
+    "rotate.schedule.interval.ms": "60000",
+    "s3.bucket.name": "ashnik-confluent-s3-sink",
+    "s3.region": "ap-southeast-1",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "tasks.max": "1",
+    "timezone": "UTC",
+    "topics": "ORCL-BULK-EMPLOYEES",
+    "topics.dir": "employees"
+}

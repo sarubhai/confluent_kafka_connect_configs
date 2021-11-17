@@ -6,12 +6,13 @@
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "delete.enabled": "true",
     "insert.mode": "upsert",
-    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
-    "key.converter.schemas.enable": "false",
-    "name": "tgt-pg-jdbc-consultants",
+    "name": "tgt-pg-jdbc-upsert-consultants1",
     "pk.fields": "id",
     "pk.mode": "record_key",
-    "table.name.format": "consultants",
+    "table.name.format": "consultants1",
     "tasks.max": "1",
-    "topics": "pg-cdc-consultants"
+    "topics": "pgserver.public.consultants",
+    "transforms": "unwrap",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState"
 }

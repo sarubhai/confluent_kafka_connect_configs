@@ -14,5 +14,13 @@
     "pk.mode": "record_key",
     "table.name.format": "CONSULTANTS1",
     "tasks.max": "1",
-    "topics": "ORCL-CDC-ORCLPDB1-CONSULTANTS"
+    "topics": "ORCL-CDC-ORCLPDB1-CONSULTANTS",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.ssl.key.password": "confluentkeystorestorepass",
+    "value.converter.schema.registry.ssl.keystore.location": "/var/ssl/private/kafka_connect.keystore.jks",
+    "value.converter.schema.registry.ssl.keystore.password": "confluentkeystorestorepass",
+    "value.converter.schema.registry.ssl.truststore.location": "/var/ssl/private/kafka_connect.truststore.jks",
+    "value.converter.schema.registry.ssl.truststore.password": "confluenttruststorepass",
+    "value.converter.schema.registry.url": "https://ip-10-0-1-30.us-west-2.compute.internal:8081",
+    "value.converter.schemas.enable": "true"
 }

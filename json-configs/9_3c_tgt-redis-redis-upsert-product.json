@@ -1,0 +1,19 @@
+{
+    "connector.class": "com.github.jcustenborder.kafka.connect.redis.RedisSinkConnector",
+    "key.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "key.converter.schemas.enable": "false",
+    "name": "tgt-redis-redis-upsert-product",
+    "redis.database": "1",
+    "redis.hosts": "10.0.1.100:6379",
+    "redis.operation.timeout.ms": "20000",
+    "redis.password": "Pa55w0rd1234",
+    "tasks.max": "1",
+    "topics": "mysqlserver.sales.product",
+    "transforms": "unwrap",
+    "transforms.key.field": "id",
+    "transforms.key.type": "org.apache.kafka.connect.transforms.ReplaceField$Key",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "value.converter.schemas.enable": "false"
+}

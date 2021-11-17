@@ -31,7 +31,7 @@ Kafka Connect includes two types of connectors:
 - Oracle
 - PostgreSQL
 - MySQL
-- MSSQL
+- MSSQL Server
 - MongoDB
 - File
 
@@ -40,8 +40,11 @@ Kafka Connect includes two types of connectors:
 - Oracle
 - PostgresSQL
 - MySQL
-- MSSQL
+- MSSQL Server
 - Elasticsearch
 - MongoDB
 - Redis
 - File
+- S3
+
+Reference: Confluent Kafka Cluster Deployment [https://github.com/sarubhai/aws_confluent_platform](https://github.com/sarubhai/aws_confluent_platform)
