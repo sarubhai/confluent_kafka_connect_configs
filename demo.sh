@@ -102,8 +102,8 @@ curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1
 # db.product.find()
 # db.product.find({code:"101-101"})
 
-file='9_3c_tgt-mongo-mongo-insert-product.json'
-cname='tgt-mongo-mongo-insert-product'
+file='9_3c_tgt-mongo-mongo-upsert-product.json'
+cname='tgt-mongo-mongo-upsert-product'
 curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1.40:8083/connectors/${cname}/config | jq .
 
 
@@ -115,8 +115,8 @@ curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1
 # get "1"
 # get "10"
 # exit
-file='9_3c_tgt-redis-redis-insert-product.json'
-cname='tgt-redis-redis-insert-product'
+file='9_3c_tgt-redis-redis-upsert-product.json'
+cname='tgt-redis-redis-upsert-product'
 curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1.40:8083/connectors/${cname}/config | jq .
 
 

@@ -13,6 +13,7 @@
     "confluent.topic.ssl.truststore.password": "confluenttruststorepass",
     "connection.pool.max.size": "20",
     "connector.class": "io.confluent.connect.oracle.cdc.OracleCdcSourceConnector",
+    "emit.tombstone.on.delete": "true",
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "key.converter.schemas.enable": "false",
     "lob.topic.name.template": "ORCL-CDC-${databaseName}-${tableName}-${columnName}",
