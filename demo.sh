@@ -39,6 +39,21 @@ cname='tgt-orcl-jdbc-upsert-consultants1'
 curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1.40:8083/connectors/${cname}/config | jq .
 
 
+# Connect to MongoDB
+# mongo 127.0.0.1:27017/admin -u root -p ${db_password}
+# show dbs
+# use hr
+# show collections
+# db.consultants.count()
+# db.consultants.find()
+# db.consultants.find({"EMAIL" : "saurav.mitra@ashnik.com"})
+# db.consultants.find({"EMAIL" : "tim.smith@freelance.com"})
+
+file='9_1c_tgt-mongo-mongo-upsert-consultants.json'
+cname='tgt-mongo-mongo-upsert-consultants'
+curl -k -s -X PUT -H "Content-Type: application/json" -d @${file} https://10.0.1.40:8083/connectors/${cname}/config | jq .
+
+
 
 DEMO 2: (PostgreSQL)
 ====================
