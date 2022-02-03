@@ -1,4 +1,4 @@
-DEMO 1: (Oracle) ^Takes 10 mins for change capture from source to reflect
+DEMO 1: (Oracle)
 ================
 # Connect to Oracle Source
 # SELECT * FROM ORCL_USER.CONSULTANTS;
